@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+<head>
+  <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" type="text/css" href="style.css">
+    <link href="https://fonts.googleapis.com/css?family=Montserrat" rel="stylesheet">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.4.1/css/all.css">
+
+    <script type="text/javascript">
+    function validate()
+    {
+      var fname = f1.txtName.value;
+      if(name == "")
+      {
+        alert("Name is required")
+        f1.txt.Name.focus();
+        return false;
+      }
+      var lname = f1.txtName.value;
+      if(name == "")
+      {
+        alert("Name is required")
+        f1.txt.Name.focus();
+        return false;
+      }
+      var email = f1.txtEmail.value;
+      if(email == "")
+      {
+        alert("Email is required");
+        f1.txtEmail.focus();
+        return false;
+      }
+      atpos = email.indexOf("@");
+      dotpos = email.lastIndexOf(".");
+      if (atpos < 1 || (dotpos - atpos < 2))
+      {
+        alert("Invalid Email");
+        f1.txtEmail.focus();
+        return false;
+      }
+      return true;
+    } 
+  </script>
+
+</head>
+<body>
+  <header class="site-header clearfix">
+    <div class="topnav"> 
+      <a href="#news">Home</a>
+      <a href="#news">Topics</a>
+      <a href="#news">Quotes</a>
+      <a href="#news">Photography</a>
+      <a href="#news">Editing</a>
+      <a href="#news">Gallery</a>
+      <a href="#news">About Us</a>
+      <a class="active" href="#Contact">Contact Us</a>
+      <input type="text" placeholder="Search..">
+    </div><br>
+  <section>
+  <nav>
+    <form name="f1" onsubmit="return validate()">
+      <h1 class="h1-contact">Contact Us</h1><br>
+      <table cellpadding="10px" cellspacing="10px"> 
+        <tr>
+          <td>First Name<br><textarea type="Name" name="FName" cols="70" rows="1"></textarea>
+        </tr>
+        <tr>
+          <td>Last Name<br><textarea type="Name" name="LName" cols="70" rows="1"></textarea>
+        </tr>
+        <tr>
+          <td>Email<br><textarea type="Email" name="Email" cols="70" rows="1"></textarea>
+        </tr>
+        <tr>
+          <td>Message<br><textarea name="Message" rows="10" cols="70"></textarea></td>
+        </tr>
+        <tr>
+          <td>
+            <p><button class="button-contact">Submit</button></p>
+          </td>
+        </tr>
+      </table>
+    </form>  
+  </nav>
+  <div>
+    <div class="column-contact">
+    <div class="card-contact">
+      <img src="logo.png" alt="Sanjog" style="width:100%">
+    </div>
+  </div>
+  </div>
+  </section>
+  <section>
+    
+  </section>
+  <a class="gotopbtn" href="#"> <i class="fas fa-arrow-up"></i> </a>
+  <div class="footer">
+  <p>@ Copyright 2020- Sanjog Pradhan Official | Ilam, Nepal<br>
+  <a href="sjofficial@gmail.com">sjofficial@gmail.com</a></p>
+  </div>
+</header>
+</body>
+</html>
